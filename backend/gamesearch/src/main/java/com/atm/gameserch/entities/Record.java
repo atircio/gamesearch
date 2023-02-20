@@ -30,6 +30,7 @@ public class Record implements Serializable{
 	@JoinColumn(name = "game_id")
 	private Game game;
 	
+
 	public Record()
 	{
 		
@@ -75,6 +76,14 @@ public class Record implements Serializable{
 		this.moment = moment;
 	}
 
+	public Game getGame() {
+		return game;
+	}
+	
+	public void setGame(Game game) {
+		this.game = game;
+	}
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(age, id, moment, name);
